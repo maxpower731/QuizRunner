@@ -10,7 +10,12 @@ public class Checkbox extends Question {
         super(question);
     }
 
-    //TODO: add a string at end of question that states "select all that apply"
+    @Override
+    public Integer promptQuestion() {
+        System.out.println("******************");
+        System.out.println(question + " Select all that apply.");
+        return this.printAnswers();
+    }
 
     @Override
     public Integer getUserInput() {
@@ -23,9 +28,7 @@ public class Checkbox extends Question {
         // get total num of correct answers for the question
         for (Integer answer : answers.values()) {
             totalCorrectAnswers += answer;
-
         }
-        System.out.println("correct answers " + totalCorrectAnswers);
 
         for (Integer i = 0; i < answers.size(); i++) {
             System.out.println("Enter a correct answer, if all correct answers have been chosen then enter '0' to move onto the next question : ");

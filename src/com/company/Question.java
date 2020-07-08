@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Scanner;
 
 public class Question {
-    private String question;
+    public String question;
     private static Scanner in = new Scanner(System.in);
     HashMap<String, Integer> answers = new HashMap<>();
     String[] choiceKeys;
@@ -27,7 +27,7 @@ public class Question {
         return this.printAnswers();
     }
 
-    private Integer printAnswers() {
+    Integer printAnswers() {
         Integer i = 0;
         choiceKeys = new String[answers.size()];
 

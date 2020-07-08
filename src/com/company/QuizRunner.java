@@ -17,7 +17,6 @@ public class QuizRunner {
         sumOfTwoPlusTwo.addAnswer("0", 0);
 
         // checkbox type question (multiple correct answers)
-        //TODO: need to update method (override in new class) to ask multiple times for input up to the size of the answer set
         Question bestName = new Checkbox("What is the best name?");
         bestName.addAnswer("Salma", 1);
         bestName.addAnswer("Mya", 1);
